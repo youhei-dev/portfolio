@@ -1,14 +1,14 @@
 # Youhei Suzuki — AI-Assisted Development Portfolio
 
-> 個人開発の成果物を、AI コーディングエージェント（主に Claude Code）を活用した開発プロセスとあわせて紹介する採用向けポートフォリオです。
+> 個人開発の成果物を、AI コーディングエージェント（主に Claude Code）を活用した開発プロセスとあわせて紹介するポートフォリオです。
 > ソースコードの配布が目的ではないため、各プロジェクトは概要・構成図・工夫した点を中心にまとめています。
 
 ## 1. 概要
 
 本業のかたわら、動画の自動生成 bot、家庭向けの学習アプリ、実店舗で使う業務アプリなどを個人で開発・運用しています。
-開発では Claude Code を「開発エージェント」として使い、調査・設計検討・実装・デバッグを任せる一方で、何を作るか、どの案を採用するか、実環境で正しく動いているかの判断は自分で行っています。
+開発では Claude Code を「開発エージェント」として使い、調査・設計検討・実装・デバッグを任せる一方で、何を作るか、どの案を選ぶか、実環境で正しく動いているかの判断は自分で行っています。
 
-このリポジトリは、その成果物と進め方を採用担当者・エンジニアの方が 5 分程度で把握できることを目標にしています。
+このリポジトリは、その成果物と進め方を読む方が 5 分程度で把握できることを目標にしています。
 元のリポジトリはすべて Private のままで、ここには秘密情報・個人情報・実運用データを含まない説明資料だけを新規に作成しています。
 
 ## 2. プロジェクト一覧
@@ -28,8 +28,8 @@ AI エージェントに任せている部分と、自分で担当・判断し�
 |---|---|
 | 技術調査、実現方法の検討、設計検討 | 何を作るか、どの機能が必要か、仕様 |
 | 既存コードの解析、コード生成、複数ファイルにまたがる実装 | AI への指示（依頼文の作成、制約と停止条件の指定） |
-| 修正、エラー原因の調査、デバッグ、リファクタリング | 生成結果の確認、問題の原因の切り分け、修正方針の採用 |
-| テストコードの作成、ドキュメント整備 | 実環境での動作確認、最終的な採用判断、継続改善 |
+| 修正、エラー原因の調査、デバッグ、リファクタリング | 生成結果の確認、問題の原因の切り分け、修正方針の決定 |
+| テストコードの作成、ドキュメント整備 | 実環境での動作確認、最終的な取捨選択の判断、継続改善 |
 
 「AI が全部作った」わけでも「すべて手書きした」わけでもなく、AI に実装を委ねつつ、判断と検証を自分が持つ形で進めています。
 各プロジェクトには CLAUDE.md（プロジェクト固有の構成・設計判断・運用ルール）と作業記録（計画・教訓）を置き、毎回ゼロから指示するのではなく、ルールを積み上げながら開発しています。
@@ -83,18 +83,18 @@ flowchart LR
 ## 7. このポートフォリオで伝えたいこと
 
 - **AI コーディングエージェントを日常の開発で使いこなしていること**: 4 プロジェクトすべてを Claude Code と開発し、CLAUDE.md・依頼文・教訓・仕様変更ログでルールを積み上げながら、数か月にわたって改善を続けています
-- **AI の出力を検証してから使う姿勢**: 動画の台本には多段の検査、学習アプリには採点と検算のアプリ側実装、業務アプリには多観点の監査と実機確認を入れ、「生成されたから採用」にはしていません
+- **AI の出力を検証してから使う姿勢**: 動画の台本には多段の検査、学習アプリには採点と検算のアプリ側実装、業務アプリには多観点の監査と実機確認を入れ、「生成されたからそのまま使う」ことはしていません
 - **動くものを作り、運用し続けていること**: 動画 bot は毎朝の定時実行、学習アプリは家庭で、業務アプリは実店舗で日常的に使われています
 - **失敗を仕組みに変えていること**: 障害や設計ミスを「何が起きたか・根本原因・再発防止ルール」の形で記録し、fail-open / fail-close の使い分けや金額のスナップショット原則のような判断基準に一般化しています
 - **安全に配慮した開発・公開**: 秘密情報と個人データを扱う前提で、環境ファイルの分離、最小権限、Private と Public の分離、公開前の監査を習慣にしています
 
 ## 8. 業務での取り組み
 
-本業では製造業の社内SEとして、レガシーWebシステムの移行、コーポレートサイトの再構築、検査・帳票業務の自動化などを担当しています。詳細は職務経歴書でご説明します。
+本業では製造業の社内SEとして、レガシーWebシステムの移行、コーポレートサイトの再構築、検査・帳票業務の自動化などを担当しています。本リポジトリでは個人開発のみを扱い、業務内容の詳細は掲載していません。
 
 ## English Summary
 
-This repository is a recruiting portfolio that presents my personal projects together with how I build them with AI coding agents, mainly Claude Code.
+This repository is a portfolio that presents my personal projects together with how I build them with AI coding agents, mainly Claude Code.
 The four projects are a daily YouTube Shorts generation pipeline (Remotion / Python / Claude API), a set of Instagram Reel bots for five accounts sharing one architecture (Python / FFmpeg), a browser-based home tutor app for elementary school students with English as the main subject (FastAPI / Claude API), and a PWA for customers, bookings, and records used daily in a real grooming salon (React / Firebase).
 I delegate research, design exploration, implementation, and debugging to the agent, while I own the requirements, the instructions, verification in the real environment, and the final decisions.
 Each project keeps its own CLAUDE.md plus records of plans and lessons, so the agent works under accumulated project rules rather than ad-hoc prompts, and generated output is checked by tests, audits, or server-side validation before it is adopted.
