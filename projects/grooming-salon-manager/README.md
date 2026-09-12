@@ -9,7 +9,16 @@ iPad を主な端末として、紙の台帳と手書きの予約表をアプリ
 | 種別 | 業務アプリ / PWA（React / TypeScript / Firebase） |
 | 公開範囲 | 本ページは概要・構成・工夫点の説明のみ。ソースコード・店舗情報・顧客データは非公開 |
 
-スクリーンショットは準備中です。
+<p>
+  <img src="screenshots/01-login.png" width="270" alt="ログイン画面">
+  <img src="screenshots/02-home.png" width="270" alt="ホーム画面（今日の予約と統計）">
+</p>
+<p>
+  <img src="screenshots/03-appointment.png" width="270" alt="予約詳細">
+  <img src="screenshots/04-customer.png" width="270" alt="顧客詳細（飼い主とペット）">
+</p>
+
+上の画像は iPad 向けの画面です（左上: ログイン、右上: ホーム、左下: 予約詳細、右下: 顧客詳細）。画面上の店名は撮影用の仮の名称、データはダミーです。
 
 ## 1. 概要
 
