@@ -9,7 +9,19 @@
 | 種別 | ブラウザ学習アプリ（Python / FastAPI / Claude API） |
 | 公開範囲 | 本ページは概要・構成・工夫点の説明のみ。ソースコード・学習データは非公開 |
 
-スクリーンショットは準備中です。
+<p>
+  <img src="screenshots/01-start.png" width="270" alt="開始画面">
+  <img src="screenshots/02-chat.png" width="270" alt="会話画面（語彙の練習）">
+</p>
+<p>
+  <img src="screenshots/03-result.png" width="270" alt="結果画面">
+  <img src="screenshots/04-test.png" width="270" alt="テストモードの選択画面">
+</p>
+<p>
+  <img src="screenshots/05-parent-dashboard.png" width="270" alt="保護者ダッシュボードのサマリー">
+</p>
+
+上の画像は英語モードの画面です（開始、会話、結果、テストモードの選択、保護者ダッシュボードのサマリー）。画面上のアプリ名は開発時の愛称、データはダミーです。
 
 ## 1. 概要
 
