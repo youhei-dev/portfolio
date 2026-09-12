@@ -16,7 +16,7 @@
 | プロジェクト | 一言説明 | 主な技術 | 状態 | 詳細 |
 |---|---|---|---|---|
 | YouTube Shorts Automation | テーマ選定から台本生成・検証・レンダリングまでを毎日自動で行う縦動画生成パイプライン | Remotion / React / TypeScript / Python / Claude API | 運用中（投稿は手動） | [詳細](projects/youtube-shorts-automation/README.md) |
-| Instagram Reel Bots | 5 アカウント分のリール動画を共通アーキテクチャで毎日生成する bot 群 | Python / FFmpeg / Claude API | （フェーズ2で記入） | （フェーズ2で追加） |
+| Instagram Reel Bots | 5 アカウント分のリール動画を共通アーキテクチャで毎日生成する bot 群 | Python / FFmpeg / Claude API | 運用中（投稿は手動） | [詳細](projects/instagram-reel-bots/README.md) |
 | AI Home Tutor | 小学生向けのブラウザ家庭教師アプリ（英語・算数） | Python / Claude API | （フェーズ3で記入） | （フェーズ3で追加） |
 | Grooming Salon Manager | トリミングサロン向けの顧客・予約・カルテ管理 PWA | React / TypeScript / Firebase | （フェーズ4で記入） | （フェーズ4で追加） |
 
