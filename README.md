@@ -98,7 +98,7 @@ This repository is a portfolio that presents my personal projects together with 
 The four projects are a daily YouTube Shorts generation pipeline (Remotion / Python / Claude API), a set of Instagram Reel bots for five accounts sharing one architecture (Python / FFmpeg), a browser-based home tutor app for elementary school students with English as the main subject (FastAPI / Claude API), and a PWA for customers, bookings, and records used daily in a real grooming salon (React / Firebase).
 I delegate research, design exploration, implementation, and debugging to the agent, while I own the requirements, the instructions, verification in the real environment, and the final decisions.
 Each project keeps its own CLAUDE.md plus records of plans and lessons, so the agent works under accumulated project rules rather than ad-hoc prompts, and generated output is checked by tests, audits, or server-side validation before it is adopted.
-Three of the projects run in daily use: scheduled generation on macOS, a family tutor app at home, and a business app in a salon.
+All four projects are in daily use: scheduled video generation on macOS for the two bot projects, a family tutor app at home, and a business app in a real salon.
 The original repositories remain private; this repository contains only newly written documentation with no secrets, personal data, or production data.
 
 ---
