@@ -58,16 +58,18 @@ flowchart LR
 
 ## 5. 技術スタック（全体）
 
-（フェーズ5で全プロジェクト分を確定）
+4 プロジェクトで実際に使っている技術をまとめています。
 
 | 分類 | 技術 |
 |---|---|
 | 言語 | Python、TypeScript |
-| フロントエンド・動画 | React、Remotion |
-| AI / API | Claude API（Anthropic）、Pexels API、YouTube Analytics API |
-| メディア処理 | FFmpeg、VOICEVOX |
-| 自動実行・通知 | launchd（macOS）、Slack API |
-| テスト | unittest（Python） |
+| フロントエンド | React、Vite、Tailwind CSS、react-router、HTML / CSS / JavaScript（フレームワーク不使用の画面もあり）、Chart.js |
+| 動画・画像・音声処理 | Remotion、FFmpeg、Pillow、budoux（日本語分かち書き）、VOICEVOX、Google Cloud Text-to-Speech、Web Speech API |
+| バックエンド・データ | FastAPI、uvicorn、SQLite、Firebase（Authentication、Cloud Firestore）、YAML / JSON による設定・履歴管理 |
+| AI・外部 API | Claude API（Anthropic）、Pexels API、YouTube Analytics API、Google Calendar API、Google Drive API、Google Identity Services（OAuth） |
+| PWA・運用 | vite-plugin-pwa、launchd（macOS）、シェルスクリプト |
+| 通知 | Slack API / Webhook、Telegram Bot API |
+| テスト・品質 | unittest、pytest、TypeScript の型チェック、npm audit、読み取り専用エージェントによる監査 |
 | 開発ツール | Git / GitHub、Claude Code |
 
 ## 6. セキュリティ・プライバシーへの配慮
@@ -80,12 +82,11 @@ flowchart LR
 
 ## 7. このポートフォリオで伝えたいこと
 
-（フェーズ5で確定）
-
-- AI コーディングエージェントを、日常の開発で実際に使いこなしていること
-- AI に任せる範囲と自分が判断する範囲を分け、生成結果を検証してから採用していること
-- 動くものを複数作り、一部は毎日の定時実行や実店舗での利用として運用し続けていること
-- 障害や失敗を教訓として記録し、ルールとして次の開発に反映していること
+- **AI コーディングエージェントを日常の開発で使いこなしていること**: 4 プロジェクトすべてを Claude Code と開発し、CLAUDE.md・依頼文・教訓・仕様変更ログでルールを積み上げながら、数か月にわたって改善を続けています
+- **AI の出力を検証してから使う姿勢**: 動画の台本には多段の検査、学習アプリには採点と検算のアプリ側実装、業務アプリには多観点の監査と実機確認を入れ、「生成されたから採用」にはしていません
+- **動くものを作り、運用し続けていること**: 動画 bot は毎朝の定時実行、学習アプリは家庭で、業務アプリは実店舗で日常的に使われています
+- **失敗を仕組みに変えていること**: 障害や設計ミスを「何が起きたか・根本原因・再発防止ルール」の形で記録し、fail-open / fail-close の使い分けや金額のスナップショット原則のような判断基準に一般化しています
+- **安全に配慮した開発・公開**: 秘密情報と個人データを扱う前提で、環境ファイルの分離、最小権限、Private と Public の分離、公開前の監査を習慣にしています
 
 ## 8. 業務での取り組み
 
@@ -93,12 +94,11 @@ flowchart LR
 
 ## English Summary
 
-（フェーズ5で確定）
-
-This repository is a recruiting portfolio that presents my personal projects together with how I build them using AI coding agents, mainly Claude Code.
-The projects include a daily YouTube Shorts generation pipeline (Remotion / Python / Claude API), a set of Instagram Reel bots sharing one architecture, a browser-based home tutor app for elementary school students, and a PWA used daily in a real grooming salon.
+This repository is a recruiting portfolio that presents my personal projects together with how I build them with AI coding agents, mainly Claude Code.
+The four projects are a daily YouTube Shorts generation pipeline (Remotion / Python / Claude API), a set of Instagram Reel bots for five accounts sharing one architecture (Python / FFmpeg), a browser-based home tutor app for elementary school students with English as the main subject (FastAPI / Claude API), and a PWA for customers, bookings, and records used daily in a real grooming salon (React / Firebase).
 I delegate research, design exploration, implementation, and debugging to the agent, while I own the requirements, the instructions, verification in the real environment, and the final decisions.
-Each project keeps its own CLAUDE.md and a record of plans and lessons, so the agent works under accumulated project rules rather than ad-hoc prompts.
+Each project keeps its own CLAUDE.md plus records of plans and lessons, so the agent works under accumulated project rules rather than ad-hoc prompts, and generated output is checked by tests, audits, or server-side validation before it is adopted.
+Three of the projects run in daily use: scheduled generation on macOS, a family tutor app at home, and a business app in a salon.
 The original repositories remain private; this repository contains only newly written documentation with no secrets, personal data, or production data.
 
 ---
