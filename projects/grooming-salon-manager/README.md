@@ -114,9 +114,7 @@ flowchart TB
 
 ## 8. Demo
 
-🎥 YouTube Demo
-
-[デモ動画を見る](https://www.youtube.com/)（URL は後で追加）
+画面の様子は上記スクリーンショットを参照してください。
 
 ## 9. このプロジェクトで得たこと
 
