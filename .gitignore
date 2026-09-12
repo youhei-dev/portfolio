@@ -1,0 +1,19 @@
+# 作業用ディレクトリ（監査ログ・切り出し画像・スクリプト等。公開しない）
+tmp/
+
+# 環境ファイル・認証情報（このリポジトリには元々置かないが、誤コミット防止のため除外）
+.env
+.env.*
+*.env
+*.key
+*.pem
+*credential*
+*client_secret*
+*service-account*
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+
+# AI コーディングエージェントのローカル設定
+.claude/settings.local.json
